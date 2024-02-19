@@ -3,7 +3,7 @@ import json
 from telegram import Update, Bot
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext
 
-API_KEY = 'f70cf4f852b26bbb0fdcf6a01663cc60' 
+API_KEY = "your api-key" 
 
 def get_weather(city):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
@@ -27,7 +27,7 @@ def error(update: Update, context: CallbackContext):
     update.message.reply_text('Sorry, I could not understand that city name.')
 
 def main():
-    bot_token = '6416174520:AAHrMkcPQbp-pfPjzey93dxBi6sTfkyvWAk'
+    bot_token = 'your bot-token'
     updater = Updater(bot_token)
     dispatcher = updater.dispatcher
 
